@@ -1,0 +1,600 @@
+{
+  "experiment": "Python / NumPy / Numba / C++ equivalent workloads",
+  "evidence_type": "measured",
+  "timestamp_utc": "2026-11-18T07:49:15.005514+00:00",
+  "compiler_path": "C:\\Users\\Ольга\\AppData\\Local\\Codex\\toolchains\\winlibs-gcc-15.3.0-ucrt-complete\\mingw64\\bin\\g++.exe",
+  "compiler_version": "g++.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 15.3.0",
+  "compiler_flags": [
+    "-O2",
+    "-std=c++17",
+    "-DNDEBUG"
+  ],
+  "cpp_compile_seconds": 14.172044,
+  "cpp_source_sha256": "18685b47d65bc313c5a2e794b51d9870d5443714a42f912fcdcc826f644cd93e",
+  "python_harness_sha256": "a2143f311b866445d7d668f6e6865d1eb2076922ffa5af3897a7f7712ca27223",
+  "python_version": "3.12.10",
+  "numpy_version": "2.5.4",
+  "numba_version": "0.68.1",
+  "threadpool_limit": 1,
+  "platform": "Windows-11-10.0.28000-SP0",
+  "processor": "Intel64 Family 6 Model 42 Stepping 7, GenuineIntel",
+  "logical_cpu_count": 4,
+  "rounds": 7,
+  "warmup_runs_per_backend_and_workload": 1,
+  "tasks": [
+    {
+      "task": "hashsum",
+      "numba_first_call_seconds": 6.6556587,
+      "workloads": [
+        {
+          "n": 1000,
+          "repeats": 1000,
+          "checksum": 10930160771652085120,
+          "timings": {
+            "python": {
+              "median_seconds": 5.877821,
+              "p25_seconds": 5.1191051,
+              "p75_seconds": 7.09326015,
+              "min_seconds": 3.5320159,
+              "max_seconds": 8.564662
+            },
+            "numpy": {
+              "median_seconds": 0.0003239,
+              "p25_seconds": 0.00026905,
+              "p75_seconds": 0.00039785,
+              "min_seconds": 0.0001788,
+              "max_seconds": 0.0053758
+            },
+            "numba": {
+              "median_seconds": 0.0054683,
+              "p25_seconds": 0.0050373,
+              "p75_seconds": 0.0063485,
+              "min_seconds": 0.0044997,
+              "max_seconds": 0.0153392
+            },
+            "cpp": {
+              "median_seconds": 0.0057172,
+              "p25_seconds": 0.0047154,
+              "p75_seconds": 0.00610645,
+              "min_seconds": 0.0027314,
+              "max_seconds": 0.0071625
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              7.5149327,
+              5.5417887,
+              6.6715876,
+              8.564662,
+              5.877821,
+              3.5320159,
+              4.6964215
+            ],
+            "numpy": [
+              0.0004027,
+              0.0002883,
+              0.000393,
+              0.0053758,
+              0.0001788,
+              0.0002498,
+              0.0003239
+            ],
+            "numba": [
+              0.0058368,
+              0.0050637,
+              0.0153392,
+              0.0054683,
+              0.0044997,
+              0.0050109,
+              0.0068602
+            ],
+            "cpp": [
+              0.0037599,
+              0.0059625,
+              0.0057172,
+              0.0071625,
+              0.0062504,
+              0.0056709,
+              0.0027314
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 1028.094,
+            "numpy": 0.057,
+            "numba": 0.956
+          }
+        },
+        {
+          "n": 10000,
+          "repeats": 100,
+          "checksum": 7310919861522497332,
+          "timings": {
+            "python": {
+              "median_seconds": 4.8251663,
+              "p25_seconds": 4.37451925,
+              "p75_seconds": 6.0730261,
+              "min_seconds": 4.2948256,
+              "max_seconds": 8.4810972
+            },
+            "numpy": {
+              "median_seconds": 0.0005723,
+              "p25_seconds": 0.00053425,
+              "p75_seconds": 0.0006655,
+              "min_seconds": 0.0005009,
+              "max_seconds": 0.0007675
+            },
+            "numba": {
+              "median_seconds": 0.0056685,
+              "p25_seconds": 0.005389,
+              "p75_seconds": 0.01079215,
+              "min_seconds": 0.0051661,
+              "max_seconds": 0.0173615
+            },
+            "cpp": {
+              "median_seconds": 0.0046079,
+              "p25_seconds": 0.0042393,
+              "p75_seconds": 0.0051294,
+              "min_seconds": 0.0041224,
+              "max_seconds": 0.0346505
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              8.4810972,
+              7.1428076,
+              5.0032446,
+              4.3119638,
+              4.4370747,
+              4.2948256,
+              4.8251663
+            ],
+            "numpy": [
+              0.0006511,
+              0.0005056,
+              0.0006799,
+              0.0005629,
+              0.0005723,
+              0.0005009,
+              0.0007675
+            ],
+            "numba": [
+              0.0173615,
+              0.0052178,
+              0.0051661,
+              0.0055602,
+              0.0056685,
+              0.0057177,
+              0.0158666
+            ],
+            "cpp": [
+              0.0042566,
+              0.0346505,
+              0.004222,
+              0.0041224,
+              0.0046079,
+              0.0048056,
+              0.0054532
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 1047.151,
+            "numpy": 0.124,
+            "numba": 1.23
+          }
+        },
+        {
+          "n": 100000,
+          "repeats": 10,
+          "checksum": 11375611554027822798,
+          "timings": {
+            "python": {
+              "median_seconds": 4.4824843,
+              "p25_seconds": 4.08386685,
+              "p75_seconds": 7.1574681,
+              "min_seconds": 2.9007473,
+              "max_seconds": 10.7380966
+            },
+            "numpy": {
+              "median_seconds": 0.0107502,
+              "p25_seconds": 0.00609275,
+              "p75_seconds": 0.01242765,
+              "min_seconds": 0.0042684,
+              "max_seconds": 0.0138529
+            },
+            "numba": {
+              "median_seconds": 0.0056699,
+              "p25_seconds": 0.00453865,
+              "p75_seconds": 0.007154,
+              "min_seconds": 0.0041678,
+              "max_seconds": 0.0102284
+            },
+            "cpp": {
+              "median_seconds": 0.0044247,
+              "p25_seconds": 0.0034363,
+              "p75_seconds": 0.0048938,
+              "min_seconds": 0.0028558,
+              "max_seconds": 0.0087638
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              4.4824843,
+              3.9082234,
+              2.9007473,
+              10.7380966,
+              4.2595103,
+              8.0829166,
+              6.2320196
+            ],
+            "numpy": [
+              0.0138529,
+              0.0042684,
+              0.0051198,
+              0.0117061,
+              0.0107502,
+              0.0070657,
+              0.0131492
+            ],
+            "numba": [
+              0.0062614,
+              0.004328,
+              0.0047493,
+              0.0102284,
+              0.0056699,
+              0.0080466,
+              0.0041678
+            ],
+            "cpp": [
+              0.00302,
+              0.0038526,
+              0.0028558,
+              0.0048617,
+              0.0044247,
+              0.0049259,
+              0.0087638
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 1013.059,
+            "numpy": 2.43,
+            "numba": 1.281
+          }
+        },
+        {
+          "n": 1000000,
+          "repeats": 1,
+          "checksum": 14591741872001879145,
+          "timings": {
+            "python": {
+              "median_seconds": 5.0363885,
+              "p25_seconds": 3.85399085,
+              "p75_seconds": 6.6285214,
+              "min_seconds": 3.7266362,
+              "max_seconds": 7.7729684
+            },
+            "numpy": {
+              "median_seconds": 0.1434944,
+              "p25_seconds": 0.1253792,
+              "p75_seconds": 0.1605402,
+              "min_seconds": 0.1053905,
+              "max_seconds": 0.1959306
+            },
+            "numba": {
+              "median_seconds": 0.0063567,
+              "p25_seconds": 0.00581275,
+              "p75_seconds": 0.0127281,
+              "min_seconds": 0.0056837,
+              "max_seconds": 0.0198074
+            },
+            "cpp": {
+              "median_seconds": 0.0048125,
+              "p25_seconds": 0.00400875,
+              "p75_seconds": 0.0065123,
+              "min_seconds": 0.0035641,
+              "max_seconds": 0.0081409
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              7.7729684,
+              6.6568262,
+              5.0363885,
+              6.6002166,
+              3.7266362,
+              3.8349834,
+              3.8729983
+            ],
+            "numpy": [
+              0.1434944,
+              0.1111449,
+              0.1959306,
+              0.1396135,
+              0.171653,
+              0.1053905,
+              0.1494274
+            ],
+            "numba": [
+              0.0057969,
+              0.012013,
+              0.0056837,
+              0.0134432,
+              0.0198074,
+              0.0058286,
+              0.0063567
+            ],
+            "cpp": [
+              0.0050952,
+              0.0081409,
+              0.0040008,
+              0.0048125,
+              0.0035641,
+              0.0040167,
+              0.0079294
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 1046.522,
+            "numpy": 29.817,
+            "numba": 1.321
+          }
+        }
+      ]
+    },
+    {
+      "task": "sieve",
+      "numba_first_call_seconds": 5.4662339,
+      "workloads": [
+        {
+          "n": 10000,
+          "repeats": 10,
+          "checksum": [
+            12290,
+            57363960
+          ],
+          "timings": {
+            "python": {
+              "median_seconds": 0.0841423,
+              "p25_seconds": 0.07698995,
+              "p75_seconds": 0.0921381,
+              "min_seconds": 0.0684252,
+              "max_seconds": 0.1390179
+            },
+            "numpy": {
+              "median_seconds": 0.0025821,
+              "p25_seconds": 0.00206215,
+              "p75_seconds": 0.00284395,
+              "min_seconds": 0.0012692,
+              "max_seconds": 0.0037737
+            },
+            "numba": {
+              "median_seconds": 0.0006017,
+              "p25_seconds": 0.00059105,
+              "p75_seconds": 0.00075865,
+              "min_seconds": 0.000389,
+              "max_seconds": 0.0010174
+            },
+            "cpp": {
+              "median_seconds": 0.000664,
+              "p25_seconds": 0.0005328,
+              "p75_seconds": 0.0009657,
+              "min_seconds": 0.0004923,
+              "max_seconds": 0.0012437
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              0.0841423,
+              0.1390179,
+              0.0684252,
+              0.0927016,
+              0.0915746,
+              0.0839297,
+              0.0700502
+            ],
+            "numpy": [
+              0.0025821,
+              0.002652,
+              0.0018435,
+              0.0012692,
+              0.0037737,
+              0.0022808,
+              0.0030359
+            ],
+            "numba": [
+              0.0006221,
+              0.0010174,
+              0.0005865,
+              0.000389,
+              0.0008952,
+              0.0006017,
+              0.0005956
+            ],
+            "cpp": [
+              0.0012437,
+              0.0005138,
+              0.000664,
+              0.0004923,
+              0.0005518,
+              0.0010525,
+              0.0008789
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 126.72,
+            "numpy": 3.889,
+            "numba": 0.906
+          }
+        },
+        {
+          "n": 100000,
+          "repeats": 3,
+          "checksum": [
+            28776,
+            1363189611
+          ],
+          "timings": {
+            "python": {
+              "median_seconds": 0.271958,
+              "p25_seconds": 0.2431543,
+              "p75_seconds": 0.307892,
+              "min_seconds": 0.1872501,
+              "max_seconds": 0.347574
+            },
+            "numpy": {
+              "median_seconds": 0.0039052,
+              "p25_seconds": 0.00291295,
+              "p75_seconds": 0.00413655,
+              "min_seconds": 0.0019608,
+              "max_seconds": 0.0050991
+            },
+            "numba": {
+              "median_seconds": 0.0019727,
+              "p25_seconds": 0.00148325,
+              "p75_seconds": 0.0022358,
+              "min_seconds": 0.0012503,
+              "max_seconds": 0.0062452
+            },
+            "cpp": {
+              "median_seconds": 0.0019035,
+              "p25_seconds": 0.0017602,
+              "p75_seconds": 0.00205885,
+              "min_seconds": 0.0015197,
+              "max_seconds": 0.0027257
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              0.271958,
+              0.2246331,
+              0.2803772,
+              0.2616755,
+              0.347574,
+              0.1872501,
+              0.3354068
+            ],
+            "numpy": [
+              0.0040956,
+              0.0039052,
+              0.0041775,
+              0.0050991,
+              0.0025652,
+              0.0019608,
+              0.0032607
+            ],
+            "numba": [
+              0.0022848,
+              0.0019727,
+              0.0021868,
+              0.0062452,
+              0.0016515,
+              0.0012503,
+              0.001315
+            ],
+            "cpp": [
+              0.0027257,
+              0.0019035,
+              0.0019368,
+              0.0021809,
+              0.0015197,
+              0.0016333,
+              0.0018871
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 142.873,
+            "numpy": 2.052,
+            "numba": 1.036
+          }
+        },
+        {
+          "n": 1000000,
+          "repeats": 1,
+          "checksum": [
+            78498,
+            37550402023
+          ],
+          "timings": {
+            "python": {
+              "median_seconds": 1.0416618,
+              "p25_seconds": 0.94830965,
+              "p75_seconds": 1.2129064,
+              "min_seconds": 0.7882516,
+              "max_seconds": 1.5074315
+            },
+            "numpy": {
+              "median_seconds": 0.0106423,
+              "p25_seconds": 0.01040005,
+              "p75_seconds": 0.0124625,
+              "min_seconds": 0.0095662,
+              "max_seconds": 0.0132492
+            },
+            "numba": {
+              "median_seconds": 0.0092415,
+              "p25_seconds": 0.0088956,
+              "p75_seconds": 0.00953485,
+              "min_seconds": 0.007825,
+              "max_seconds": 0.0200944
+            },
+            "cpp": {
+              "median_seconds": 0.0115166,
+              "p25_seconds": 0.00994865,
+              "p75_seconds": 0.01529345,
+              "min_seconds": 0.0078721,
+              "max_seconds": 0.0180155
+            }
+          },
+          "samples_seconds": {
+            "python": [
+              1.1319578,
+              1.293855,
+              0.9224702,
+              1.0416618,
+              1.5074315,
+              0.7882516,
+              0.9741491
+            ],
+            "numpy": [
+              0.0095662,
+              0.0130063,
+              0.0119187,
+              0.0132492,
+              0.0105349,
+              0.0102652,
+              0.0106423
+            ],
+            "numba": [
+              0.0097803,
+              0.0091542,
+              0.007825,
+              0.0200944,
+              0.0092415,
+              0.008637,
+              0.0092894
+            ],
+            "cpp": [
+              0.0114612,
+              0.0180155,
+              0.0115166,
+              0.0150459,
+              0.0078721,
+              0.0084361,
+              0.015541
+            ]
+          },
+          "python_over_cpp_ratio": {
+            "python": 90.449,
+            "numpy": 0.924,
+            "numba": 0.802
+          }
+        }
+      ]
+    }
+  ],
+  "method": "Each backend computes the same checksum for the same workload. NumPy, Python, and Numba are timed in-process; C++ reports steady-state time from std::chrono and excludes process startup. NumPy input/setup allocations are included in the measured function. Numba first-call/JIT time and C++ compile time are reported separately.",
+  "limitations": [
+    "Two CPU microbenchmarks do not represent all application workloads.",
+    "This is a single-machine exploratory run; power state and background load can still affect timings.",
+    "Peak resident memory is not measured here; the report does not make total-RAM claims.",
+    "The arithmetic C++ loop uses exact uint64 arithmetic and the sieve uses byte flags; no FFI marshaling cost is included."
+  ]
+}

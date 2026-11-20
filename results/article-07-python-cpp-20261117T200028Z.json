@@ -1,0 +1,208 @@
+{
+  "experiment": "Python vs C++ sum of squares; in-process loop timing",
+  "evidence_type": "measured",
+  "timestamp_utc": "2026-11-17T20:00:25.675119+00:00",
+  "compiler_path": "C:\\Users\\Ольга\\AppData\\Local\\Codex\\toolchains\\winlibs-gcc-15.3.0-ucrt-complete\\mingw64\\bin\\g++.exe",
+  "compiler_version": "g++.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 15.3.0",
+  "compiler_flags": [
+    "-O2",
+    "-std=c++17",
+    "-DNDEBUG"
+  ],
+  "link_search_overrides": [
+    "lib/gcc/x86_64-w64-mingw32/15.3.0",
+    "x86_64-w64-mingw32/lib",
+    "lib"
+  ],
+  "compiler_binary_sha256": "5206131176083a78513c806b02826659e9a876641bc081f4783ab56416ce1125",
+  "cpp_source_sha256": "0ba9a5ab41f016e99b083ada9b62b78ebea20f5169827e3a2dd60f4885fe4224",
+  "python_harness_sha256": "4426aa122026a7c98f99af0b7fd84db045c73239bf76768aa7b7af69cf8923d0",
+  "rounds": 9,
+  "warmup_runs_per_runtime_and_workload": 1,
+  "python_version": "3.12.10",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 42 Stepping 7, GenuineIntel",
+  "logical_cpu_count": 4,
+  "workloads": [
+    {
+      "n_per_sum": 1000,
+      "repeats": 1000,
+      "loop_iterations_per_sample": 1000000,
+      "checksum": 332833500000,
+      "python": {
+        "median_seconds": 0.4775078,
+        "p25_seconds": 0.4401518,
+        "p75_seconds": 0.5151865,
+        "min_seconds": 0.3970733,
+        "max_seconds": 0.5600727
+      },
+      "cpp": {
+        "median_seconds": 0.0016205,
+        "p25_seconds": 0.0014597,
+        "p75_seconds": 0.0019468,
+        "min_seconds": 0.0012728,
+        "max_seconds": 0.0020891
+      },
+      "python_samples_seconds": [
+        0.4775078,
+        0.504162,
+        0.5151865,
+        0.4526228,
+        0.3970733,
+        0.5600727,
+        0.5545085,
+        0.4067791,
+        0.4401518
+      ],
+      "cpp_samples_seconds": [
+        0.0014597,
+        0.0017917,
+        0.0019468,
+        0.0016205,
+        0.0019493,
+        0.0020891,
+        0.0014008,
+        0.0012728,
+        0.0014925
+      ],
+      "speedup_cpp_over_python": 294.667
+    },
+    {
+      "n_per_sum": 10000,
+      "repeats": 100,
+      "loop_iterations_per_sample": 1000000,
+      "checksum": 33328333500000,
+      "python": {
+        "median_seconds": 0.8844604,
+        "p25_seconds": 0.7834211,
+        "p75_seconds": 1.0311334,
+        "min_seconds": 0.548286,
+        "max_seconds": 1.3162466
+      },
+      "cpp": {
+        "median_seconds": 0.0032485,
+        "p25_seconds": 0.0021609,
+        "p75_seconds": 0.0034604,
+        "min_seconds": 0.0016901,
+        "max_seconds": 0.0085434
+      },
+      "python_samples_seconds": [
+        0.548286,
+        1.0311334,
+        0.7949248,
+        0.7834211,
+        0.6801966,
+        1.3162466,
+        1.0472635,
+        0.9627355,
+        0.8844604
+      ],
+      "cpp_samples_seconds": [
+        0.0034604,
+        0.0021609,
+        0.0027941,
+        0.0016901,
+        0.0036482,
+        0.0020722,
+        0.0085434,
+        0.0032485,
+        0.0033232
+      ],
+      "speedup_cpp_over_python": 272.267
+    },
+    {
+      "n_per_sum": 100000,
+      "repeats": 10,
+      "loop_iterations_per_sample": 1000000,
+      "checksum": 3333283333500000,
+      "python": {
+        "median_seconds": 0.5248215,
+        "p25_seconds": 0.5240502,
+        "p75_seconds": 0.6703275,
+        "min_seconds": 0.4232122,
+        "max_seconds": 0.8524495
+      },
+      "cpp": {
+        "median_seconds": 0.001888,
+        "p25_seconds": 0.0017126,
+        "p75_seconds": 0.0025825,
+        "min_seconds": 0.0010477,
+        "max_seconds": 0.0038651
+      },
+      "python_samples_seconds": [
+        0.6703275,
+        0.5351511,
+        0.5246991,
+        0.5121832,
+        0.4232122,
+        0.5240502,
+        0.5248215,
+        0.7924823,
+        0.8524495
+      ],
+      "cpp_samples_seconds": [
+        0.0026061,
+        0.0021179,
+        0.0010477,
+        0.0038651,
+        0.001888,
+        0.0017126,
+        0.0017937,
+        0.0014703,
+        0.0025825
+      ],
+      "speedup_cpp_over_python": 277.977
+    },
+    {
+      "n_per_sum": 1000000,
+      "repeats": 1,
+      "loop_iterations_per_sample": 1000000,
+      "checksum": 333332833333500000,
+      "python": {
+        "median_seconds": 0.5325733,
+        "p25_seconds": 0.385617,
+        "p75_seconds": 0.6033579,
+        "min_seconds": 0.3502276,
+        "max_seconds": 0.7271395
+      },
+      "cpp": {
+        "median_seconds": 0.0018693,
+        "p25_seconds": 0.0012118,
+        "p75_seconds": 0.001933,
+        "min_seconds": 0.00102,
+        "max_seconds": 0.0025381
+      },
+      "python_samples_seconds": [
+        0.7271395,
+        0.3574218,
+        0.385617,
+        0.3502276,
+        0.5853816,
+        0.4824285,
+        0.5325733,
+        0.6033579,
+        0.6523528
+      ],
+      "cpp_samples_seconds": [
+        0.0025381,
+        0.001933,
+        0.0014515,
+        0.00102,
+        0.0018693,
+        0.0011707,
+        0.0019164,
+        0.0012118,
+        0.0024081
+      ],
+      "speedup_cpp_over_python": 284.905
+    }
+  ],
+  "method": "Both runtimes execute the same nested integer loops in their own process. C++ reports steady-state loop time from std::chrono; Python uses perf_counter. Compilation and process startup are excluded. Runtime order alternates, each measurement is correctness-checked, raw times are retained, and medians/IQR are reported.",
+  "limitations": [
+    "A sum-of-squares loop is a narrow CPU-bound microbenchmark, not a representative application workload.",
+    "The result describes this machine, compiler, optimization level, Python version, and implementation only.",
+    "The C++ executable starts once per sample, but its internal timer excludes process startup; Python is measured within the already-running harness.",
+    "Power management, thermal state, and background processes can affect results; this is a single-session exploratory experiment."
+  ]
+}
