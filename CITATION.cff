@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "При использовании исходного кода укажите репозиторий и точный коммит."
+title: "SYNERGY HIAI 07: Python, NumPy, Numba и C++"
+type: software
+authors:
+  - name: "SYNERGY contributors"
+repository-code: "https://github.com/Shtenco/timeweb_synergy_python_cpp_performance"
+license: MIT
